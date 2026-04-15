@@ -254,3 +254,52 @@ button.next:hover {
     object-fit: contain;
     margin-bottom: 20px;
 }
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .carousel {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .slide {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .slide img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .prev,
+    .next {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+}
