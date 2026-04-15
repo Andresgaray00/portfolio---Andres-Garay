@@ -2,88 +2,152 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-
-</body>
-</html>
-
-
-    <link rel="stylesheet" href="styles.css">
-
+    <!-- HERO -->
     <section class="hero">
-        <img src="foto.jpg" alt="foto de Andres" class="profile-pic">
+        <img src="foto.jpg" alt="Foto de Andres" class="profile-pic">
 
         <h1>Hola, soy Andres Garay.</h1>
         <p>Backend Developer - Future Appian Developer.</p>
+
         <div class="hero-buttons">
             <a href="#">GitHub</a>
             <a href="#">LinkedIn</a>
         </div>
+    </section>
+
+    <!-- SKILLS -->
     <section>
+        <h2>Mis Skills</h2>
 
-<section>
-    <h2>Mis skills</h2>
+        <div class="cards">
+            <div class="card python">
+                <h3>Python</h3>
+                <p>Backend y automatización</p>
+            </div>
 
-    <div class="cards">
-         <div class="card python">
-             <h3>python</h3>
-             <p>Backend y automatizacion</p>
-         </div>
+            <div class="card java">
+                <h3>Java</h3>
+                <p>Programación orientada a objetos</p>
+            </div>
 
-         <div class="card java">
-            <h3>Java</h3>
-            <p>Programacion orientada a objetos</p>
-         </div>
+            <div class="card sql">
+                <h3>SQL</h3>
+                <p>Bases de datos</p>
+            </div>
 
-         <div class="card sql"
-            <h3>SQL</h3>
-            <p>Bases de datos</p>
-         </div>
+            <div class="card appian">
+                <h3>Appian</h3>
+                <p>Automatización empresarial</p>
+                <p>Procesos empresariales</p>
+            </div>
+        </div>
+    </section>
 
-         <div class="card appian">
-            <h3>Appian</h3>
-            <p>Automatizacion empresarial</p>
-            <p>Procesos empresariales</p>
-         </div>
+    <section class="learning-roadmap">
+    <h2>Mi Ruta de Aprendizaje</h2>
+
+    <div class="roadmap">
+        <div class="step">
+            <h3>🐍 Python</h3>
+            <p>Fundamentos, lógica y automatización.</p>
+        </div>
+
+        <div class="step">
+            <h3>☕ Java</h3>
+            <p>POO, backend y APIs REST.</p>
+        </div>
+
+        <div class="step">
+            <h3>🗄 SQL</h3>
+            <p>Bases de datos y consultas optimizadas.</p>
+        </div>
+
+        <div class="step">
+            <h3>☁ AWS</h3>
+            <p>Cloud computing y despliegue de aplicaciones.</p>
+        </div>
+
+        <div class="step">
+            <h3>⚡ Appian</h3>
+            <p>Automatización empresarial y BPM.</p>
+        </div>
     </div>
 </section>
 
-<section>
-    <h2>Mis proyectos</h2>
+    <!-- SOBRE MI -->
+    <section class="about">
+        <h2>Sobre mí</h2>
+        <p>
+            Mi enfoque actual está en fortalecer backend con Java y SQL,
+            aprender AWS para cloud y especializarme en Appian
+            para construir soluciones empresariales escalables.
+        </p>
+    </section>
 
-    <div class="projects">
-        <div class="project">
-        <h3>CRUD en python</h3>
-        <p>sistema para gestionar con menu interactivo.</p>
-    </div>
+    <!-- CARRUSEL -->
+    <section class="carousel-section">
+        <h2>Mi Camino como Backend Developer</h2>
 
-    <div class="project">
-        <h3>API REST en Java</h3>
-        <p>Proyecto backend con endpoints para usuarios y autenticacion.</p>
-    </div>
+        <div class="slide active">
+    <img src="img/java.jpg" alt="Java">
+    <h3>Java</h3>
+    <p>Mi enfoque principal para backend.</p>
+</div>
 
-    <div class="project">
-        <h3>SQL DataBase</h3>
-        <p>Diseño de base de datos relacional y consultas optimizadas.</p>
-    </div>
-  </div>
-</section>
+<div class="slide">
+    <img src="img/sql.jpg" alt="SQL">
+    <h3>SQL</h3>
+    <p>Bases de datos y consultas optimizadas.</p>
+</div>
 
-</section class="about">
-    <h2>Sobre mi</h2>
-    <p>
-        Soy un desarrollador en formacion apasionado por el backend, la automatizacion
-        y la creacion de soluciones empresariales. Disfruto trabajar con Python, java,
-        SQL y seguir creciendo hacia Appian para construir procesos eficientes.
-    </p>
-</section>
+<div class="slide">
+    <img src="img/aws.jpg" alt="AWS">
+    <h3>AWS</h3>
+    <p>Cloud y despliegue profesional.</p>
+</div>
 
+<div class="slide">
+    <img src="img/appian.jpg" alt="Appian">
+    <h3>Appian</h3>
+    <p>Mi meta para automatización empresarial.</p>
+</div>
+            <button class="next">&#10095;</button>
+        </div>
+    </section>
 
+    <script>
+        const slides = document.querySelectorAll(".slide");
+        const nextBtn = document.querySelector(".next");
+        const prevBtn = document.querySelector(".prev");
 
+        let index = 0;
 
+        function showSlide(i) {
+            slides.forEach(slide => slide.classList.remove("active"));
+            slides[i].classList.add("active");
+        }
+
+        nextBtn.addEventListener("click", () => {
+            index = (index + 1) % slides.length;
+            showSlide(index);
+        });
+
+        prevBtn.addEventListener("click", () => {
+            index = (index - 1 + slides.length) % slides.length;
+            showSlide(index);
+        });
+
+        showSlide(index);
+    </script>
+
+</body>
+</html>
 
 
     
